@@ -1,0 +1,38 @@
+def top(a,b):
+    return a+b
+def eks(a,b):
+    return a-b
+def çarp(a,b):
+    return a*b
+def böl(a,b):
+    return a/b
+
+print("Yapmak İstediğiniz İşlemi Seçiniz:")
+print("1 = Toplama \n2 = Çıkarma \n3 = Çarpma \n4 = Bölme")
+
+while True:
+    choice = input("Seçiminiz Nedir?(1/2/3/4):\n")
+
+    if choice in('1','2','3','4'):
+        try:
+            num1 = float(input("İlk sayıyı giriniz:"))
+            num2 = float(input("İkinci sayıyı giriniz:"))
+        except ValueError:
+            print("Lütfen sayıyla yaziniz.")
+            continue
+
+        if choice == '1':
+            print(num1, "+", num2, "=", top(num1,num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", eks(num1,num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", çarp(num1,num2))
+        elif choice == '4':
+            print(num1, "/", num2, "=", böl(num1,num2))
+
+        sonraki_islem = input("Başka bir işlem yapmak ister misiniz(evet/hayır): ")
+        if sonraki_islem == "hayır":
+            print("Görüşmek üzere :)")
+            break 
+    else:
+        print("Geçersiz giriş!")
