@@ -1,0 +1,14 @@
+sayac = 1 
+toplam = 0 
+
+global islem
+islem = True 
+
+while islem == True:
+    toplam = toplam + sayac
+    sayac = sayac + 1 
+
+    if sayac >= 10:
+        islem = False
+
+print("1-10 arasındaki sayıların toplamı:",toplam)
